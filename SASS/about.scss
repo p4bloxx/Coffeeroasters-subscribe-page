@@ -1,0 +1,145 @@
+@use 'style.scss' as *;
+
+//hero-section
+.hero-about{
+  background: url('../ASSETS/About/mobile/image-hero-whitecup.jpg') no-repeat center right / cover;
+  padding-block: 6.875rem 5.4375rem;
+
+    @media (width >= 48em){
+      background: url('../ASSETS/About/tablet/image-hero-whitecup.jpg') no-repeat center right / cover;
+    }
+
+    @media (width >= 56em){
+      background: url('../ASSETS/About/desktop/image-hero-whitecup.jpg') no-repeat center right / cover;
+    }
+
+    p{
+      max-width: 50ch;
+    }
+}
+
+
+//Committent section
+.committent{
+  @include flex-column-center;
+  gap: 3rem;
+  margin-block-end: 12.375rem;
+    &__text h2{
+      margin-block-end: $fs-32;
+      font-size: $fs-32;
+    }
+
+    @media(width > 40em){
+      flex-direction: row;
+        
+      &__text{
+        max-width: 55%;
+      }
+    }
+
+    @media (width > 60em){
+      gap: 7.8125rem;
+        &__text p{
+          max-width: 55ch;
+        }
+    }
+}
+
+
+//Quality section
+.quality{
+  margin-block-end: 7.5rem;
+  position: relative;
+
+    &__text{
+      padding: 8.75rem $fs-24 3.75rem;
+        h2{
+          margin-block-end: $fs-24;
+        }
+    }
+
+   &__img{
+      position: absolute;
+      top: -5rem;
+      width: 100%;
+        img{
+          max-width: 17.5rem;
+          margin-inline: auto;
+        }
+    }
+
+    @media(width > 40em){
+      text-align: center;
+      margin-block-start: 19rem;
+
+        &__text{
+          padding: 14rem 4.625rem 4.1875rem;
+        }
+
+        &__img{
+          top: -10rem;
+          img{
+            max-width: 35.8125rem;
+          }
+        }
+    }
+
+    @media (width > 60em){
+      text-align: left;
+      margin-block-start: 16rem;
+
+        &__text{
+          padding: 5.5rem 0 11rem 5.3125rem;
+            p{
+              max-width: 55ch;
+            }
+        }
+
+        &__img{
+          top: -6rem;
+          img{
+            max-width: fit-content;
+            margin-inline: auto 5.3125rem;
+          }
+        }
+    }
+}
+
+
+//Headq section
+.headq{
+  &__boxes{
+    @include flex-column-center;
+    gap: 5rem;
+    margin-block-start: 7.5rem;
+  }
+
+  &__box{
+    @include flex-column-center;
+      
+      h3{
+        margin-block: 3rem $fs-24;
+      }
+  }
+
+  @media(width > 40em){
+    &__boxes{
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: start;
+      gap: $fs-32;
+    }
+
+    &__box{
+      align-items: start;
+    }
+  }
+
+  @media(width > 60em){
+    margin-inline-start: 5.3125rem;
+    &__boxes{
+      margin-block-start: 4.5rem;
+      gap:  8rem;
+    }
+  }
+}

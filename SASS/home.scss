@@ -1,0 +1,472 @@
+@use 'style.scss' as *;
+
+body{
+  background-color: $light-cream-BG;
+  text-align: center;
+    @media (width > 40em){
+      text-align: left;
+    }
+}
+
+.wrapper{
+  margin-block: 7.5rem;
+    @media (width > 40em) {
+      margin-block: 9rem;
+    }
+}
+
+@media (width > 60em){
+  .wrapper{
+    margin-block: 10.5rem;
+  }
+  .wrapper-small{
+    margin-block-start: 5.5rem;
+  }
+
+  .collection{
+    margin-block-end: 12.5rem;
+  }
+
+  .steps{
+    margin-block-start: 12.5rem;
+  }
+}
+
+
+
+//Headernav
+.headernav{
+ margin-block-end: $fs-32;
+
+  &__nav{
+    @include flex-row-between;
+    padding: $fs-32 $fs-24 0 $fs-24;
+    position: relative;
+      @media (width > 40em) {
+        padding: $fs-40 $fs-40 0;
+      }
+
+      @media (width > 60em) {
+        padding: 2.6875rem 5rem 0;
+      }
+      @media (width >= 40em) {
+        button{
+          display: none;
+        }
+      }
+    }  
+  
+  .logo{
+    position: relative;
+    z-index: 10;
+    width: 10.1875rem;
+  }
+
+  &__open[aria-expanded='true'] {
+    + .headernav__menu {
+      translate: 0;
+
+      @media (prefers-reduced-motion) {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__links{
+    @include flex-row-center;
+    gap: $fs-32;
+    text-transform: uppercase;
+    color: $grey;
+    font-weight: $fw-bld;
+    font-size: $fs-12;
+  }
+
+  @media (width < 40em){
+    &__menu{
+      position: fixed;
+      z-index: 2;
+      inset: $fs-32 0 0 0;
+      translate: 100vw 0;
+      transition: translate 0.6s cubic-bezier(0.86,0,0.07,1);
+      @include flex-column-center;
+      justify-content: start;
+      background: linear-gradient(0deg, rgba(254,252,247,0.5) 0%, rgba(254,252,247,1) 60%);
+        .headernav__close{
+          margin-inline: auto $fs-24;
+        }
+    }
+
+    &__links{
+      font-family: $ff-Fraunces;
+      font-size: $fs-24;
+      margin-block-start: 5rem;
+      color: $dark-grey-blue;
+      @include flex-column-center;
+        & li:not(:last-child){
+          margin-block-end: $fs-32;
+        }
+    }
+  }
+
+
+  @media (width > 40em) {
+    margin-block-end: 3.3125rem;
+  }
+
+  
+  @media (width > 60em) {
+    margin-block-end: 2.6875rem;
+  }
+  
+}
+
+
+//Hero-section
+#main-content{
+  padding-inline: $fs-24;   
+}
+
+.hero-plan,
+.steps,
+.coffee,
+.footer{
+  margin-inline: $fs-24;
+}
+
+@media (width > 40em){
+  #main-content{
+    padding-inline: $fs-40;
+  }
+
+  .hero-plan,
+  .coffee,
+  .footer{
+    margin-inline: $fs-40;
+  }
+}
+
+@media (width > 60em){
+  #main-content,
+  #main-content-plan{
+    padding-inline: 5rem;
+  }
+
+  .hero-plan,
+  .coffee,
+  .footer{
+    margin-inline: 0;
+  }
+}
+
+.hero-section{
+  background: url('../ASSETS/Home/mobile/image-hero-coffeepress.jpg') no-repeat center center / cover;
+  margin-block-end: 7.5rem;
+  padding: 6.25rem $fs-24;
+
+    & > *{
+      margin-inline: auto;
+    }
+
+    p{
+      margin-block: $fs-24 $fs-40;
+    }
+
+    @media (width >= 48em){
+      background: url('../ASSETS/Home/tablet/image-hero-coffeepress.jpg') no-repeat center center / cover;
+    }
+
+    @media (width >= 56em){
+      background: url('../ASSETS/Home/desktop/image-hero-coffeepress.jpg') no-repeat center center / cover;
+    }
+
+    @media(width > 40em){
+      text-align: left;
+      padding-inline-start: 3.625rem;
+      margin-block-end: 0;
+
+        & > *{
+          margin-inline: 0 auto;
+        }
+
+        p{
+          max-width: 45ch;
+        }
+    }
+
+    @media (width > 60em) {
+      padding-inline: 5.3125rem;
+
+      .hero-home{
+        padding-block: 7.25rem;
+      }
+
+      h1{
+        max-width: 10ch;
+      }
+        
+    }
+}
+
+//Collection section
+.collection{
+  &__items{
+    @include flex-column-center;
+    gap: 3rem;
+    margin-block-start: $fs-32;
+    padding-inline: $fs-24;
+    position: relative;
+    z-index: 10;
+
+      & img{
+        width: 9.375rem;
+      }
+  }
+
+  &__item{
+    @include flex-column-center;
+      h3{
+        margin-block: $fs-24 $fs-16;
+      }
+
+      & img{
+        width: 13rem;
+      }
+
+      div{
+        align-self: start;
+      }
+  }
+
+  @media (width > 40em){
+    margin-block-start: 6rem;
+    &__item{
+      @include flex-row-center;
+      flex-direction: row;
+      padding-inline: 3.75rem;
+    }
+  }
+
+  @media (width > 60em){
+    margin-block-start: 6.5rem;
+    text-align: center;
+      &__items{
+        flex-direction: row;
+        align-items: stretch;
+        gap: $fs-24;
+      }
+
+      &__item{
+        flex-direction: column;
+        padding-inline:0;
+
+          h3{
+            margin-block: 4.375rem $fs-24
+          }
+
+          p{
+            max-width: 25ch;
+          }
+      }
+  }
+}
+
+//Choose section
+.choose{
+  position: relative;
+  min-height: 56rem;
+  margin-block-end: 44.8125rem;
+
+  &__text{
+    padding: 4rem $fs-24 0;
+      p{
+        margin-block-start: $fs-24;
+      }
+  }
+
+  &__cards{
+    position: absolute;
+    top: 19.0625rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+      & > div:not(:last-child){
+        margin-block-end: $fs-24;
+      }
+  }
+
+  &__card{
+    padding: 4.5rem $fs-20 3.125rem;
+    margin-inline: $fs-24;
+    @include flex-column-center;
+      h4{
+        margin-block: 3.5rem $fs-24;
+      }
+  }
+
+  @media (width > 40em){
+    min-height: 35.8125rem;
+    margin-block-end: 27.125rem;
+    &__text{
+      padding: 3.5rem 4.625rem 0;
+      text-align: center;
+    }
+
+    &__cards{
+      top: 18rem;
+    }
+
+    &__card{
+      @include flex-column-center;
+      flex-direction: row;
+      gap: 3.4375rem;
+      padding: $fs-40 3rem $fs-40 4.375rem;
+      margin-inline: 3.4375rem;
+        h4{
+          margin-block: 0 $fs-16;
+        }
+
+        img{
+          width: 3.4375rem;
+        }
+    }
+  }
+
+  @media (width > 60em){
+    min-height: 36.0625rem;
+    margin-block-end:20rem;
+      &__text{
+        padding: 6.25rem 23.125rem 0;
+      }
+
+      &__cards{
+        @include flex-row-center;
+        align-items: stretch;
+        text-align: center;
+        gap: $fs-32;
+        margin-inline: 5.3125rem;
+        top: 22rem;
+        & > div:not(:last-child){
+          margin-block-end: 0;
+        }
+      }
+
+      &__card{
+        flex-direction: column;
+        padding: 4.5rem 3rem 3rem;
+        margin: 0;
+      }
+  }
+}
+
+//Steps section
+@media (width < 40em){
+  #timeline{
+    display: none;
+  }
+}
+
+.steps{
+  @include flex-column-center;
+  span{
+    font-size: 4.5rem;
+  }
+
+  &__boxes{
+    margin-block: 5rem;
+
+      h3{
+        margin-block: $fs-24;
+      }
+
+      & > div:not(:last-child){
+        margin-block-end: 3.5rem;
+      }
+  }
+
+  button{
+    margin-inline: auto;
+  }
+
+  @media (width > 40em){
+    align-items: start;
+
+    &__boxes{
+      margin-block: 0 2.75rem;
+     @include flex-row-center;
+     align-items: stretch;
+     gap: 0.7rem;
+     text-wrap: pretty;
+  
+        h3{
+          margin-block: $fs-40;
+        }
+  
+        & > div:not(:last-child){
+          margin-block-end: 0rem;
+        }
+    }
+
+    button{
+      margin-inline: 0 auto;
+    }
+  }
+
+  @media (width > 60em){
+    &__boxes{
+      gap: 5.9375rem;
+      margin-block: 0 4rem;
+
+        h3{
+          max-width: 10ch;
+        }
+
+        p{
+          max-width: 35ch;
+        }
+    }
+  }
+}
+
+//Footer
+.footer{
+  @include flex-column-center;
+  margin-inline: $fs-24;
+  margin-block-end: 4.5rem;
+  padding: 3.375rem;
+  gap: 3rem;
+
+    &__nav ul{
+      @include flex-column-center;
+      gap: $fs-24;
+        & li{
+          color: $grey;
+          font-size: $fs-12;
+          font-weight: $fw-bld;
+        }
+    }
+
+    &__box-social ul{
+      @include flex-row-center;
+      gap: $fs-24;
+    }
+
+    @media (width > 40em){
+      margin-inline: $fs-40;
+      &__nav ul{
+        flex-direction: row;
+        gap: $fs-32;
+      }
+    }
+
+    @media(width > 60em){
+      flex-direction: row;
+      justify-content: start;
+      padding: 2.9375rem 5.3125rem;
+      margin-inline: 5rem;
+      margin-block-end: 5.5rem;
+
+        &__nav{
+          margin-inline-end: auto;
+        }
+    }
+}

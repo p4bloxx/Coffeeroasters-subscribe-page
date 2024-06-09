@@ -1,0 +1,645 @@
+@font-face {
+  font-family: "Barlow";
+  font-weight: 400;
+  src: local("Barlow Regular"), url("../ASSETS/Typefaces/Barlow/Barlow-Regular.woff") format("woff"), url("../ASSETS/Typefaces/Barlow/Barlow-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Barlow";
+  font-weight: 700;
+  src: local("Barlow Bold"), url("../ASSETS/Typefaces/Barlow/Barlow-Bold.woff") format("woff"), url("../ASSETS/Typefaces/Barlow/Barlow-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fraunces";
+  font-weight: 900;
+  src: local("Fraunces Black"), url("../ASSETS/Typefaces/Fraunces/Fraunces-9ptBlack.woff") format("woff"), url("../ASSETS/Typefaces/Fraunces/Fraunces-9ptBlack.woff2") format("woff2");
+}
+h1 {
+  font-size: clamp(2.5rem, -4.5rem + 16vw, 4.5rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 0.8846rem + 3.0769vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.75rem, 1.4615rem + 1.0256vw, 2rem);
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: clamp(0.9375rem, 0.8654rem + 0.2564vw, 1rem);
+  line-height: 1.625rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd, ul, li, button, input {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  display: block;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  /* overflow-y: hidden; */
+  position: relative;
+  font-weight: 400;
+  font-family: "Barlow", sans-serif;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+  font-family: "Fraunces", sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+dialog {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+picture img {
+  width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition-duration: 0s !important;
+  }
+}
+.text-light-gray {
+  color: #FEFCF7;
+}
+
+.ligh-cream-BG {
+  background-color: #FEFCF7;
+}
+
+.ligh-cream-TXT {
+  color: #FEFCF7;
+}
+
+.cream-card {
+  background-color: #F4F1EB;
+}
+
+.pine-green-BG {
+  background-color: #0E8784;
+}
+
+.pine-green-TXT {
+  color: #0E8784;
+}
+
+.dark-grey-blue-BG {
+  background-color: #333D4B;
+}
+
+.dark-grey-blue-TXT {
+  color: #333D4B;
+}
+
+.grey-BG {
+  background-color: #83888f;
+}
+
+.grey-TXT {
+  color: #83888f;
+}
+
+.pale-orange-BG {
+  background-color: #FDD6BA;
+}
+
+.pale-orange-TXT {
+  color: #FDD6BA;
+}
+
+.fs-12 {
+  font-size: 0.75rem;
+}
+
+.fs-18 {
+  font-size: 1.125rem;
+}
+
+.fs-24 {
+  font-size: 1.5rem;
+}
+
+.fs-28 {
+  font-size: 1.75rem;
+}
+
+.ff-barlow {
+  font-family: "Barlow", sans-serif;
+}
+
+.ff-fraunces {
+  font-family: "Fraunces", sans-serif;
+}
+
+.fw-rgl {
+  font-weight: 400;
+}
+
+.fw-bld {
+  font-weight: 700;
+}
+
+.br-radius {
+  border-radius: 0.5rem;
+}
+
+.opacity-txt {
+  opacity: 0.8;
+}
+
+.card {
+  background-color: #F4F1EB;
+}
+
+[data-current=true] {
+  background-color: #0E8784;
+  color: #FFF;
+}
+
+.main-cta {
+  background-color: #0E8784;
+  color: #FEFCF7;
+  font-size: 1.125rem;
+  padding: 0.9375rem 2rem 1rem 2rem;
+  border-radius: 0.5rem;
+  font-family: "Fraunces", sans-serif;
+  cursor: pointer;
+  /* transform: scale(1); */
+}
+@media (prefers-reduced-motion: no-preference) {
+  .main-cta {
+    transition-property: transform;
+  }
+  .main-cta:hover {
+    animation: scale 0.5s ease;
+    background-color: #66D2CF;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.cta-disabled {
+  background-color: #E2DEDB;
+  pointer-events: none;
+}
+
+.default {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.index-active {
+  opacity: 1;
+}
+
+.disabled-tab {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.panel-close:not(:last-child) {
+  margin-block-end: 0;
+}
+
+.panel-open:not(:last-child) {
+  margin-block-end: 6.875rem;
+}
+@media (width > 40em) {
+  .panel-open:not(:last-child) {
+    margin-block-end: 6.25rem;
+  }
+}
+@media (width > 60em) {
+  .panel-open:not(:last-child) {
+    margin-block-end: 5.5rem;
+  }
+}
+
+.navmenu li {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.navmenu li:hover {
+  color: #333D4B;
+}
+
+.footer__nav ul li:hover {
+  color: #FEFCF7;
+}
+
+.social-icon,
+.social-icon path {
+  transition: all 0.3s ease;
+}
+.social-icon:hover path,
+.social-icon path:hover path {
+  fill: #FDD6BA;
+}
+
+.skip-btn {
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 1rem;
+  left: 4rem;
+  transform: translateY(-150%);
+}
+.skip-btn:focus {
+  transform: translateY(0);
+}
+
+.big-h2 {
+  font-size: 2.5rem;
+  position: relative;
+  color: #83888f;
+  text-align: center;
+}
+.big-h2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(254, 252, 247, 0.6) 0%, rgb(254, 252, 247) 100%);
+}
+@media (width > 40em) {
+  .big-h2 {
+    font-size: 6rem;
+    z-index: 0;
+    translate: 0 5rem;
+  }
+}
+@media (width > 60em) {
+  .big-h2 {
+    font-size: 9.375rem;
+  }
+}
+
+.p-serif {
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  font-family: "Fraunces", sans-serif;
+}
+
+.hero-plan {
+  background: url("../ASSETS/Plan/mobile/image-hero-blackcup.jpg") no-repeat center top/cover;
+}
+@media (width >= 48em) {
+  .hero-plan {
+    background: url("../ASSETS/Plan/tablet/image-hero-blackcup.jpg") no-repeat center right/cover;
+  }
+}
+@media (width >= 56em) {
+  .hero-plan {
+    background: url("../ASSETS/Plan/desktop/image-hero-blackcup.jpg") no-repeat center right/cover;
+  }
+}
+
+.steps {
+  padding: 5rem 1.5rem;
+}
+@media (width > 40em) {
+  .steps {
+    padding: 6.25rem 2.5rem 5rem;
+    margin-inline: 0;
+  }
+  .steps__boxes {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    align-items: center;
+    align-items: stretch;
+    margin: 0;
+  }
+  .steps #timeline {
+    margin-block-end: 3rem;
+  }
+}
+@media (width > 60em) {
+  .steps {
+    padding: 6.25rem 5.3125rem 6.25rem;
+  }
+  .steps #timeline {
+    width: 47.5rem;
+    margin-block-end: 5rem;
+  }
+}
+
+@media (width <= 56em) {
+  .coffee__index {
+    display: none;
+  }
+}
+.coffee__accordion {
+  text-align: left;
+}
+.coffee__title {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 2rem;
+}
+.coffee__title button {
+  text-align: left;
+  max-width: 13ch;
+}
+.coffee__cards p {
+  opacity: 0.8;
+}
+.coffee__cards > div {
+  text-align: left;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+.coffee__cards > div:not(:last-child) {
+  margin-block-end: 1rem;
+}
+.coffee__content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+}
+.coffee__content h4 {
+  margin-bottom: 0.5rem;
+}
+.coffee__content > div {
+  overflow: hidden;
+}
+.coffee .coffee__content[aria-hidden=false] {
+  grid-template-rows: 1fr;
+}
+.coffee__recap__text {
+  padding: 2rem 1.5rem;
+  margin-block-end: 3.5rem;
+  text-align: left;
+}
+.coffee__recap__text p {
+  margin-block-start: 0.5rem;
+}
+.coffee .cta-recap {
+  margin-inline: auto;
+}
+@media (width > 40em) {
+  .coffee #timeline {
+    margin-block-end: 3rem;
+  }
+  .coffee__title button {
+    max-width: fit-content;
+  }
+  .coffee__cards {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    align-items: center;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .coffee__cards > div:not(:last-child) {
+    margin-block-end: 0;
+  }
+  .coffee__cards > div {
+    padding: 2rem 1.5rem 5.25rem;
+  }
+}
+@media (width > 60em) {
+  .coffee {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    align-items: center;
+    gap: 7.8125rem;
+    margin-inline: 5.3125rem;
+  }
+  .coffee__index {
+    align-self: start;
+  }
+  .coffee__index span {
+    font-family: "Fraunces", sans-serif;
+    font-size: 1.5rem;
+  }
+  .coffee__index div {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    align-items: center;
+    justify-content: stretch;
+    gap: 1.75rem;
+  }
+  .coffee__index div > * {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .coffee__index div h4 {
+    text-wrap: nowrap;
+  }
+  .coffee__index div:hover span, .coffee__index div:hover h4 {
+    opacity: 0.7;
+  }
+  .coffee__index div:not(:last-child) {
+    padding-block-end: 1.5rem;
+    margin-block-end: 1.5rem;
+    border-bottom: 2px solid rgba(131, 136, 143, 0.2);
+  }
+  .coffee__accordion {
+    text-align: left;
+  }
+  .coffee__content {
+    max-width: 45.625rem;
+  }
+  .coffee__content h4 {
+    margin-bottom: 1.5rem;
+  }
+  .coffee__title {
+    margin-block-end: 3.5rem;
+  }
+  .coffee__title, .coffee__title * {
+    cursor: pointer;
+  }
+  .coffee__title:hover svg > path, .coffee__title *:hover svg > path {
+    fill: #66D2CF;
+  }
+  .coffee__title svg,
+  .coffee__title svg path {
+    transition: all 0.3s ease;
+  }
+  .coffee__cards {
+    gap: 1.5rem;
+  }
+  .coffee__cards > div {
+    padding-inline: 1.75rem;
+    cursor: pointer;
+  }
+  .coffee__cards > div:hover {
+    background-color: #FDD6BA;
+    animation: scale 0.5s ease;
+  }
+  .coffee .cta-recap {
+    margin-inline: auto 0;
+  }
+  .coffee__recap__text {
+    margin-block-end: 2.5rem;
+  }
+}
+
+.dialog {
+  margin: 2rem 1.5rem;
+  text-align: left;
+  transition: opacity 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+  pointer-events: none;
+  opacity: 0;
+}
+.dialog #order-cost {
+  display: none;
+}
+.dialog #price-order-btn {
+  display: inline;
+}
+.dialog__summary > div:first-child {
+  padding-block: 1.75rem;
+  padding-inline-start: 1.5rem;
+}
+.dialog__summary > div:last-child {
+  padding: 2.5rem 1.5rem 1.5rem;
+}
+.dialog button {
+  margin-block-start: 1.5rem;
+  margin-inline: auto;
+}
+@media (width > 40em) {
+  .dialog {
+    max-width: 33.75rem;
+    margin: auto;
+  }
+  .dialog #order-cost {
+    display: inline;
+  }
+  .dialog #price-order-btn {
+    display: none;
+  }
+  .dialog__summary > div:first-child {
+    padding-block: 3rem 2.5rem;
+    padding-inline-start: 3.5rem;
+  }
+  .dialog__summary > div:last-child {
+    padding: 3.5rem;
+  }
+  .dialog__btn {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    align-items: center;
+    gap: 0.75rem;
+    margin-block-start: 3rem;
+  }
+  .dialog__btn #order-cost {
+    font-size: 2rem;
+    display: block;
+  }
+  .dialog button {
+    margin-block-start: 0;
+    margin-inline: 0;
+    padding-inline: 4rem;
+  }
+}
+.dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+dialog[aria-hidden=false] {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.resume-text span:not(.grind-option) {
+  color: #0E8784;
+}
+
+/*# sourceMappingURL=create%20your%20plan.css.map */

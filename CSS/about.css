@@ -1,0 +1,511 @@
+@font-face {
+  font-family: "Barlow";
+  font-weight: 400;
+  src: local("Barlow Regular"), url("../ASSETS/Typefaces/Barlow/Barlow-Regular.woff") format("woff"), url("../ASSETS/Typefaces/Barlow/Barlow-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Barlow";
+  font-weight: 700;
+  src: local("Barlow Bold"), url("../ASSETS/Typefaces/Barlow/Barlow-Bold.woff") format("woff"), url("../ASSETS/Typefaces/Barlow/Barlow-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fraunces";
+  font-weight: 900;
+  src: local("Fraunces Black"), url("../ASSETS/Typefaces/Fraunces/Fraunces-9ptBlack.woff") format("woff"), url("../ASSETS/Typefaces/Fraunces/Fraunces-9ptBlack.woff2") format("woff2");
+}
+h1 {
+  font-size: clamp(2.5rem, -4.5rem + 16vw, 4.5rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 0.8846rem + 3.0769vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.75rem, 1.4615rem + 1.0256vw, 2rem);
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: clamp(0.9375rem, 0.8654rem + 0.2564vw, 1rem);
+  line-height: 1.625rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd, ul, li, button, input {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  display: block;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  /* overflow-y: hidden; */
+  position: relative;
+  font-weight: 400;
+  font-family: "Barlow", sans-serif;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+  font-family: "Fraunces", sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+dialog {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+picture img {
+  width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition-duration: 0s !important;
+  }
+}
+.text-light-gray {
+  color: #FEFCF7;
+}
+
+.ligh-cream-BG {
+  background-color: #FEFCF7;
+}
+
+.ligh-cream-TXT {
+  color: #FEFCF7;
+}
+
+.cream-card {
+  background-color: #F4F1EB;
+}
+
+.pine-green-BG {
+  background-color: #0E8784;
+}
+
+.pine-green-TXT {
+  color: #0E8784;
+}
+
+.dark-grey-blue-BG {
+  background-color: #333D4B;
+}
+
+.dark-grey-blue-TXT {
+  color: #333D4B;
+}
+
+.grey-BG {
+  background-color: #83888f;
+}
+
+.grey-TXT {
+  color: #83888f;
+}
+
+.pale-orange-BG {
+  background-color: #FDD6BA;
+}
+
+.pale-orange-TXT {
+  color: #FDD6BA;
+}
+
+.fs-12 {
+  font-size: 0.75rem;
+}
+
+.fs-18 {
+  font-size: 1.125rem;
+}
+
+.fs-24 {
+  font-size: 1.5rem;
+}
+
+.fs-28 {
+  font-size: 1.75rem;
+}
+
+.ff-barlow {
+  font-family: "Barlow", sans-serif;
+}
+
+.ff-fraunces {
+  font-family: "Fraunces", sans-serif;
+}
+
+.fw-rgl {
+  font-weight: 400;
+}
+
+.fw-bld {
+  font-weight: 700;
+}
+
+.br-radius {
+  border-radius: 0.5rem;
+}
+
+.opacity-txt {
+  opacity: 0.8;
+}
+
+.card {
+  background-color: #F4F1EB;
+}
+
+[data-current=true] {
+  background-color: #0E8784;
+  color: #FFF;
+}
+
+.main-cta {
+  background-color: #0E8784;
+  color: #FEFCF7;
+  font-size: 1.125rem;
+  padding: 0.9375rem 2rem 1rem 2rem;
+  border-radius: 0.5rem;
+  font-family: "Fraunces", sans-serif;
+  cursor: pointer;
+  /* transform: scale(1); */
+}
+@media (prefers-reduced-motion: no-preference) {
+  .main-cta {
+    transition-property: transform;
+  }
+  .main-cta:hover {
+    animation: scale 0.5s ease;
+    background-color: #66D2CF;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.cta-disabled {
+  background-color: #E2DEDB;
+  pointer-events: none;
+}
+
+.default {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.index-active {
+  opacity: 1;
+}
+
+.disabled-tab {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.panel-close:not(:last-child) {
+  margin-block-end: 0;
+}
+
+.panel-open:not(:last-child) {
+  margin-block-end: 6.875rem;
+}
+@media (width > 40em) {
+  .panel-open:not(:last-child) {
+    margin-block-end: 6.25rem;
+  }
+}
+@media (width > 60em) {
+  .panel-open:not(:last-child) {
+    margin-block-end: 5.5rem;
+  }
+}
+
+.navmenu li {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.navmenu li:hover {
+  color: #333D4B;
+}
+
+.footer__nav ul li:hover {
+  color: #FEFCF7;
+}
+
+.social-icon,
+.social-icon path {
+  transition: all 0.3s ease;
+}
+.social-icon:hover path,
+.social-icon path:hover path {
+  fill: #FDD6BA;
+}
+
+.skip-btn {
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 1rem;
+  left: 4rem;
+  transform: translateY(-150%);
+}
+.skip-btn:focus {
+  transform: translateY(0);
+}
+
+.big-h2 {
+  font-size: 2.5rem;
+  position: relative;
+  color: #83888f;
+  text-align: center;
+}
+.big-h2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(254, 252, 247, 0.6) 0%, rgb(254, 252, 247) 100%);
+}
+@media (width > 40em) {
+  .big-h2 {
+    font-size: 6rem;
+    z-index: 0;
+    translate: 0 5rem;
+  }
+}
+@media (width > 60em) {
+  .big-h2 {
+    font-size: 9.375rem;
+  }
+}
+
+.p-serif {
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  font-family: "Fraunces", sans-serif;
+}
+
+.hero-about {
+  background: url("../ASSETS/About/mobile/image-hero-whitecup.jpg") no-repeat center right/cover;
+  padding-block: 6.875rem 5.4375rem;
+}
+@media (width >= 48em) {
+  .hero-about {
+    background: url("../ASSETS/About/tablet/image-hero-whitecup.jpg") no-repeat center right/cover;
+  }
+}
+@media (width >= 56em) {
+  .hero-about {
+    background: url("../ASSETS/About/desktop/image-hero-whitecup.jpg") no-repeat center right/cover;
+  }
+}
+.hero-about p {
+  max-width: 50ch;
+}
+
+.committent {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-block-end: 12.375rem;
+}
+.committent__text h2 {
+  margin-block-end: 2rem;
+  font-size: 2rem;
+}
+@media (width > 40em) {
+  .committent {
+    flex-direction: row;
+  }
+  .committent__text {
+    max-width: 55%;
+  }
+}
+@media (width > 60em) {
+  .committent {
+    gap: 7.8125rem;
+  }
+  .committent__text p {
+    max-width: 55ch;
+  }
+}
+
+.quality {
+  margin-block-end: 7.5rem;
+  position: relative;
+}
+.quality__text {
+  padding: 8.75rem 1.5rem 3.75rem;
+}
+.quality__text h2 {
+  margin-block-end: 1.5rem;
+}
+.quality__img {
+  position: absolute;
+  top: -5rem;
+  width: 100%;
+}
+.quality__img img {
+  max-width: 17.5rem;
+  margin-inline: auto;
+}
+@media (width > 40em) {
+  .quality {
+    text-align: center;
+    margin-block-start: 19rem;
+  }
+  .quality__text {
+    padding: 14rem 4.625rem 4.1875rem;
+  }
+  .quality__img {
+    top: -10rem;
+  }
+  .quality__img img {
+    max-width: 35.8125rem;
+  }
+}
+@media (width > 60em) {
+  .quality {
+    text-align: left;
+    margin-block-start: 16rem;
+  }
+  .quality__text {
+    padding: 5.5rem 0 11rem 5.3125rem;
+  }
+  .quality__text p {
+    max-width: 55ch;
+  }
+  .quality__img {
+    top: -6rem;
+  }
+  .quality__img img {
+    max-width: fit-content;
+    margin-inline: auto 5.3125rem;
+  }
+}
+
+.headq__boxes {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  margin-block-start: 7.5rem;
+}
+.headq__box {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  align-items: center;
+}
+.headq__box h3 {
+  margin-block: 3rem 1.5rem;
+}
+@media (width > 40em) {
+  .headq__boxes {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: start;
+    gap: 2rem;
+  }
+  .headq__box {
+    align-items: start;
+  }
+}
+@media (width > 60em) {
+  .headq {
+    margin-inline-start: 5.3125rem;
+  }
+  .headq__boxes {
+    margin-block-start: 4.5rem;
+    gap: 8rem;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */

@@ -1,0 +1,226 @@
+@use 'variables and mixins' as *;
+
+//Utiliy class
+
+.text-light-gray{
+  color: #FEFCF7;
+}
+
+.ligh-cream-BG{
+  background-color: $light-cream-BG;
+}
+
+.ligh-cream-TXT{
+  color: $light-cream-BG;
+}
+
+.cream-card{
+  background-color: $cream-card;
+}
+
+.pine-green-BG{
+  background-color: $pine-green;
+}
+
+.pine-green-TXT{
+  color: $pine-green;
+}
+
+.dark-grey-blue-BG{
+  background-color: $dark-grey-blue;
+}
+
+.dark-grey-blue-TXT{
+  color: $dark-grey-blue;
+}
+
+.grey-BG{
+  background-color: $grey;
+}
+
+.grey-TXT{
+  color: $grey;
+}
+
+.pale-orange-BG{
+  background-color: $pale-orange;
+}
+
+.pale-orange-TXT{
+  color: $pale-orange;
+}
+
+.fs-12{
+  font-size: $fs-12;
+}
+
+.fs-18{
+  font-size: $fs-18;
+}
+
+.fs-24{
+  font-size: $fs-24;
+}
+
+.fs-28{
+  font-size: $fs-28;
+}
+
+.ff-barlow{
+  font-family: $ff-barlow;
+}
+
+.ff-fraunces{
+  font-family: $ff-Fraunces;
+}
+
+.fw-rgl{
+  font-weight: $fw-rgl;
+}
+
+.fw-bld{
+  font-weight: $fw-bld;
+}
+
+.br-radius{
+  border-radius: 0.5rem;
+}
+
+.opacity-txt{
+  opacity: 0.8;
+}
+
+.card{
+  background-color: $cream-card;
+}
+
+[data-current="true"]{
+  background-color: #0E8784;
+  color: #FFF;
+}
+
+.main-cta{
+  background-color: $pine-green;
+  color: $light-cream-BG;
+  font-size: $fs-18;
+  padding: $fs-15 $fs-32 $fs-16 $fs-32;
+  border-radius: 0.5rem;
+  font-family: $ff-Fraunces;
+  cursor: pointer;
+  /* transform: scale(1); */
+  @media (prefers-reduced-motion: no-preference){
+    transition-property: transform;
+    &:hover{
+      animation: scale 0.5s ease /* cubic-bezier(.68,-0.03,.33,1.31) */;
+      background-color: $green-hover;
+    }
+  }
+}
+
+@keyframes scale {
+  0%{
+    transform: scale(0.6);
+  }
+
+  100%{
+    transform: scale(1);
+  }
+}
+
+.cta-disabled{
+  background-color: $grey-disabled;
+  pointer-events: none;
+}
+
+.default{
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.index-active{
+  opacity: 1;
+}
+
+.disabled-tab{
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.panel-close:not(:last-child){
+  margin-block-end: 0;
+}
+
+.panel-open:not(:last-child){
+  margin-block-end: 6.875rem;
+    @media(width > 40em){
+      margin-block-end: 6.25rem;
+    }
+
+    @media(width > 60em){
+      margin-block-end: 5.5rem;
+    }
+}
+
+//Navmenu list item
+.navmenu li{
+  cursor: pointer;
+  transition: all 0.3s ease;
+    &:hover{
+      color: $dark-grey-blue;
+    }
+}
+
+.footer__nav ul li:hover{
+  color: $light-cream-BG;
+}
+
+//Social icon
+.social-icon,
+.social-icon path{
+  transition: all 0.3s ease;
+    &:hover path{
+      fill: #FDD6BA;
+    }
+}
+
+//skip to main section
+.skip-btn{
+  padding: .5rem 1rem;
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 1rem;
+  left: 4rem;
+  transform: translateY(-150%);
+    &:focus{
+      transform: translateY(0);
+    }
+}
+
+.big-h2{
+  font-size: $fs-40;
+  position: relative;
+  color: $grey;
+  text-align: center;
+    &::after{
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(254,252,247,0.6) 0%, rgba(254,252,247,1) 100%);
+    }
+
+    @media (width > 40em) {
+      font-size: 6rem;
+      z-index: 0;
+      translate: 0 5rem;
+    }
+
+    @media (width > 60em) {
+      font-size: 9.375rem;
+    }
+}
+
+.p-serif{
+  line-height: $fs-40;
+  font-size: $fs-24;
+  font-family: $ff-Fraunces;
+}

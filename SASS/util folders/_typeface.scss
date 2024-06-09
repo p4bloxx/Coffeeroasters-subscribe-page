@@ -1,0 +1,46 @@
+//Typefaces
+@font-face{
+  font-family: 'Barlow';
+  font-weight: 400;
+  src: local('Barlow Regular'), 
+       url('../ASSETS/Typefaces/Barlow/Barlow-Regular.woff') format('woff'),
+       url('../ASSETS/Typefaces/Barlow/Barlow-Regular.woff2') format('woff2');
+}
+
+@font-face{
+  font-family: 'Barlow';
+  font-weight: 700;
+  src: local('Barlow Bold'), 
+       url('../ASSETS/Typefaces/Barlow/Barlow-Bold.woff') format('woff'),
+       url('../ASSETS/Typefaces/Barlow/Barlow-Bold.woff2') format('woff2');
+}
+
+@font-face{
+  font-family: 'Fraunces';
+  font-weight: 900;
+  src: local('Fraunces Black'), 
+       url('../ASSETS/Typefaces/Fraunces/Fraunces-9ptBlack.woff') format('woff'),
+       url('../ASSETS/Typefaces/Fraunces/Fraunces-9ptBlack.woff2') format('woff2');
+}
+
+
+h1{
+  font-size: clamp(2.5rem, -4.5rem + 16vw, 4.5rem);
+}
+
+h2{
+  font-size: clamp(1.75rem, 0.8846rem + 3.0769vw, 2.5rem);
+}
+
+h3{
+  font-size: clamp(1.75rem, 1.4615rem + 1.0256vw, 2rem);
+}
+
+h4{
+  font-size: 1.5rem;
+}
+
+p{
+  font-size: clamp(0.9375rem, 0.8654rem + 0.2564vw, 1rem);
+  line-height: 1.625rem;
+}

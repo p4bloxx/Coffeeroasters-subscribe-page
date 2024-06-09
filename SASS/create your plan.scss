@@ -1,0 +1,308 @@
+@use 'style.scss' as *;
+
+
+//Hero-section
+.hero-plan{
+  background: url('../ASSETS/Plan/mobile/image-hero-blackcup.jpg') no-repeat center top / cover;
+
+  @media (width >= 48em){
+    background: url('../ASSETS/Plan/tablet/image-hero-blackcup.jpg') no-repeat center right / cover;
+  }
+
+  @media (width >= 56em){
+    background: url('../ASSETS/Plan/desktop/image-hero-blackcup.jpg') no-repeat center right / cover;
+  }
+}
+
+
+//Steps section
+.steps{
+  padding: 5rem $fs-24;
+  
+    @media (width > 40em){
+      padding: 6.25rem $fs-40 5rem;
+      margin-inline: 0;
+      &__boxes{
+        @include flex-row-center;
+        align-items: stretch;
+        margin: 0;
+      }
+
+      #timeline{
+        margin-block-end: 3rem;
+      }
+    }
+
+    @media (width > 60em){
+      padding: 6.25rem 5.3125rem 6.25rem;
+        #timeline{
+          width: 47.5rem;
+          margin-block-end: 5rem;
+        }
+    }
+}
+
+//Coffee section
+.coffee{
+  @media (width <= 56em){
+    &__index{
+      display: none;
+    }
+  }
+  
+  &__accordion{
+    text-align: left;
+  }
+
+  &__title{
+    @include flex-row-between;
+    margin-block-end: $fs-32;
+    button{
+      text-align: left;
+      max-width: 13ch;
+    }
+  }
+
+  &__cards p{
+    opacity: 0.8;
+  }
+
+  &__cards > div{
+    text-align: left;
+    border-radius: 0.5rem;
+    padding: $fs-24;
+    transition: all 0.3s ease;
+  }
+
+  &__cards > div:not(:last-child){
+    margin-block-end: $fs-16;
+  }
+
+  &__content{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+    h4{
+      margin-bottom: 0.5rem;
+    }
+
+    & > div{
+    overflow: hidden;
+   }
+  }
+
+  //To open accordion's tab
+  .coffee__content[aria-hidden="false"]{
+    grid-template-rows: 1fr;
+  }
+
+
+  &__recap__text{
+    padding: $fs-32 $fs-24;
+    margin-block-end: 3.5rem;
+    text-align: left;
+      p{
+        margin-block-start: 0.5rem;
+      }
+  }
+
+  .cta-recap{
+    margin-inline: auto;
+  }
+
+  @media (width > 40em){
+
+    #timeline{
+      margin-block-end: 3rem;
+    }
+
+    &__title{
+      button{
+        max-width: fit-content;
+      }
+    }
+
+    &__cards{
+      @include flex-row-center;
+      align-items: stretch;
+      gap: 0.5rem;
+    }
+
+    &__cards > div:not(:last-child){
+      margin-block-end: 0;
+    }
+
+    &__cards > div{
+      padding: $fs-32 $fs-24 5.25rem;
+    }
+  }
+
+  @media(width > 60em){
+    @include flex-row-center;
+    gap:  7.8125rem;
+    margin-inline: 5.3125rem;
+
+      &__index{
+        align-self: start;
+          span{
+            font-family: $ff-Fraunces;
+            font-size: $fs-24;
+          }
+
+          div{
+            @include flex-row-center;
+            justify-content: stretch;
+            gap: 1.75rem;
+
+              & > *{
+                cursor: pointer;
+                transition: all 0.3s ease;
+              }
+
+              h4{
+                text-wrap: nowrap;
+              }
+
+              &:hover span,
+              &:hover h4{
+                opacity: 0.7;
+              }
+          }
+
+          div:not(:last-child){
+            padding-block-end: $fs-24;
+            margin-block-end: $fs-24;
+            border-bottom: 2px solid rgba(131, 136, 143, 0.2);
+          }
+      }
+
+      &__accordion{
+        text-align: left;
+      }
+
+      &__content{
+        max-width: 45.625rem;
+        h4{
+          margin-bottom:$fs-24;
+        }
+      }
+
+      &__title{
+        margin-block-end: 3.5rem;
+          &,
+          &  *{
+            cursor: pointer;
+              &:hover svg > path{
+                fill: $green-hover;
+              }
+          }
+          svg,
+          svg path{
+            transition: all 0.3s ease;
+          }
+      }
+
+      &__cards{
+        gap: $fs-24;
+      }
+
+      &__cards > div{
+        padding-inline: 1.75rem;
+        cursor: pointer;
+          &:hover{
+            background-color: $pale-orange;
+            animation: scale 0.5s ease;
+          }
+      }
+
+      .cta-recap{
+        margin-inline: auto 0;
+      }
+
+      &__recap__text{
+        margin-block-end: $fs-40;
+      }
+  }
+}
+
+
+//Dialog
+.dialog{
+  margin: $fs-32 $fs-24;
+  text-align: left;
+  transition: opacity 0.3s cubic-bezier(0.86,0,0.07,1);
+  pointer-events: none;
+  opacity: 0;
+
+  #order-cost{
+    display: none;
+  }
+
+  #price-order-btn{
+    display: inline;
+  }
+    &__summary > div:first-child{
+      padding-block: 1.75rem;
+      padding-inline-start: $fs-24;
+    }
+
+    &__summary > div:last-child{
+      padding: $fs-40 $fs-24 $fs-24;
+    }
+
+    button{
+      margin-block-start: $fs-24;
+      margin-inline: auto;
+    }
+
+    @media (width > 40em){
+      max-width: 33.75rem;
+      margin: auto;
+
+      #order-cost{
+        display: inline;
+      }
+
+      #price-order-btn{
+        display: none;
+      }
+
+      &__summary > div:first-child{
+        padding-block: 3rem $fs-40;
+        padding-inline-start: 3.5rem;
+      }
+
+      &__summary > div:last-child{
+        padding: 3.5rem;
+      }
+
+      &__btn{
+        @include flex-row-center;
+        gap: $fs-12;
+        margin-block-start: 3rem;
+          #order-cost{
+            font-size: $fs-32;
+            display: block;
+          }
+      }
+
+      button{
+        margin-block-start: 0;
+        margin-inline: 0;
+        padding-inline: 4rem;
+      }
+    }
+
+    &::backdrop{
+      background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+dialog[aria-hidden="false"]{
+  opacity: 1;
+  pointer-events: all;
+}
+
+.resume-text span:not(.grind-option){
+  color: $pine-green;
+}

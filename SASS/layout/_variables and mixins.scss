@@ -1,0 +1,50 @@
+@use '../util\ folders/' as *;
+
+//Variables
+//Colors
+$light-cream-BG: #FEFCF7;
+$cream-card: #F4F1EB;
+$pine-green: #0E8784;
+$dark-grey-blue: #333D4B;
+$grey: #83888f;
+$pale-orange: #FDD6BA;
+$green-hover: #66D2CF;
+$grey-disabled: #E2DEDB;
+
+//Typography
+$ff-barlow: 'Barlow', sans-serif;
+$ff-Fraunces: 'Fraunces', sans-serif;
+$fw-rgl: 400;
+$fw-bld: 700;
+
+$fs-12: 0.75rem;
+$fs-15: 0.9375rem;
+$fs-16: 1rem;
+$fs-18: 1.125rem;
+$fs-20: 1.25rem;
+$fs-24: 1.5rem;
+$fs-28: 1.75rem;
+$fs-32: 2rem;
+$fs-40: 2.5rem;
+
+@mixin flex-row-start{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+@mixin flex-row-center{
+  @include flex-row-start;
+  align-items: center;
+}
+
+@mixin flex-row-between{
+  @include flex-row-center;
+  justify-content: space-between;
+}
+
+@mixin flex-column-center{
+  @include flex-row-start;
+  flex-direction: column;
+  align-items: center;
+}
