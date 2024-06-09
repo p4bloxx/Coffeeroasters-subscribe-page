@@ -366,6 +366,15 @@ textarea:not([rows]) {
   font-family: "Fraunces", sans-serif;
 }
 
+@media (width < 40em) {
+  .timeline {
+    display: none;
+  }
+}
+.timeline {
+  margin-block-end: 3rem;
+}
+
 body {
   background-color: #FEFCF7;
   text-align: center;
@@ -742,11 +751,14 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.steps h4 {
+  margin-block-end: 2.5rem;
+}
 .steps span {
   font-size: 4.5rem;
 }
 .steps__boxes {
-  margin-block: 5rem;
+  /* margin-block: 5rem; */
 }
 .steps__boxes h3 {
   margin-block: 1.5rem;
@@ -760,6 +772,9 @@ body {
 @media (width > 40em) {
   .steps {
     align-items: start;
+  }
+  .steps h4 {
+    margin-block-end: 5rem;
   }
   .steps__boxes {
     margin-block: 0 2.75rem;

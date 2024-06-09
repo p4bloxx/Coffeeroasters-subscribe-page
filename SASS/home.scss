@@ -367,12 +367,17 @@ body{
 
 .steps{
   @include flex-column-center;
+
+  h4{
+    margin-block-end: $fs-40;
+  }
+
   span{
     font-size: 4.5rem;
   }
 
   &__boxes{
-    margin-block: 5rem;
+    /* margin-block: 5rem; */
 
       h3{
         margin-block: $fs-24;
@@ -389,6 +394,10 @@ body{
 
   @media (width > 40em){
     align-items: start;
+    
+    h4{
+      margin-block-end: 5rem;
+    }
 
     &__boxes{
       margin-block: 0 2.75rem;

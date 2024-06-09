@@ -366,4 +366,13 @@ textarea:not([rows]) {
   font-family: "Fraunces", sans-serif;
 }
 
+@media (width < 40em) {
+  .timeline {
+    display: none;
+  }
+}
+.timeline {
+  margin-block-end: 3rem;
+}
+
 /*# sourceMappingURL=style.css.map */

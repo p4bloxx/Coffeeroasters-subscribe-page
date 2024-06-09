@@ -366,6 +366,15 @@ textarea:not([rows]) {
   font-family: "Fraunces", sans-serif;
 }
 
+@media (width < 40em) {
+  .timeline {
+    display: none;
+  }
+}
+.timeline {
+  margin-block-end: 3rem;
+}
+
 .hero-plan {
   background: url("../ASSETS/Plan/mobile/image-hero-blackcup.jpg") no-repeat center top/cover;
 }
@@ -396,15 +405,12 @@ textarea:not([rows]) {
     align-items: stretch;
     margin: 0;
   }
-  .steps #timeline {
-    margin-block-end: 3rem;
-  }
 }
 @media (width > 60em) {
   .steps {
     padding: 6.25rem 5.3125rem 6.25rem;
   }
-  .steps #timeline {
+  .steps .timeline {
     width: 47.5rem;
     margin-block-end: 5rem;
   }
@@ -468,7 +474,7 @@ textarea:not([rows]) {
   margin-inline: auto;
 }
 @media (width > 40em) {
-  .coffee #timeline {
+  .coffee .timeline {
     margin-block-end: 3rem;
   }
   .coffee__title button {

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create_your_plan</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/home.css">
+  <link rel="stylesheet" href="CSS/about.css">
+  <link rel="stylesheet" href="CSS/create your plan.css">
+  <script src="JS/nav-menu-dialog-scrollReveal.js" defer></script>
+  <script src="JS/accordion.js" defer></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-btn | dark-grey-blue-BG | ligh-cream-TXT | br-radius">Skip navigation</a>
+  <header class="headernav">
+    <nav class="headernav__nav">
+      <a href="index.html" class="logo"><img src="ASSETS/Shared/desktop/logo.svg" alt="logo company - Coffeeroasters"></a>
+      <span id="nav-label" hidden>Navigation</span>
+      <button id="btnOpen" class="headernav__open" aria-expanded="false" aria-labelledby="nav-label">
+        <img src="./ASSETS/Shared/mobile/icon-hamburger.svg" alt=""/>
+      </button>
+      <div class="headernav__menu" role="dialog" aria-labelledby="nav-label">
+        <button class="headernav__close" id="btnClose" aria-label="Close">
+          <img src="./ASSETS/Shared/mobile/icon-close.svg" alt=""/>
+        </button>
+        <div>
+          <ul class="headernav__links | navmenu">
+            <li class="headernav__item">
+              <a href="index.html" class="headernav__link">Home</a>
+            </li>
+            <li class="headernav__item">
+              <a href="about_us.html" class="headernav__link">About Us</a>
+            </li>
+            <li class="headernav__item">
+              <a href="create_your_plan.html" class="headernav__link">Create Your Plan</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content-plan" class="main-plan">
+    <section class="hero-section | hero-plan | ligh-cream-TXT | br-radius | reveal">
+      <h1>Create a plan</h1>
+      <p class="opacity-txt">Build a subscription plan that best fits your needs. We offer an assortment of the best 
+        artisan coffees from around the globe delivered fresh to your door.</p>
+    </section>
+    
+    <section class="steps | wrapper | dark-grey-blue-BG | br-radius | reveal | delay">
+      <img src="./ASSETS/Plan/tablet/timeline.png" alt="" class="timeline">
+      <div class="steps__boxes">
+        <div class="steps__box">
+          <span class="pale-orange-TXT | ff-fraunces">01</span>
+          <h3 class="ligh-cream-TXT">Pick your
+            coffee</h3>
+          <p class="ligh-cream-TXT">Select from our evolving range 
+            of artisan coffees. Our beans 
+            are ethically sourced and we 
+            pay fair prices for them. There 
+            are new coffees in all profiles every month for you to try out.</p>
+        </div>
+        <div class="steps__box">
+          <span class="pale-orange-TXT | ff-fraunces">02</span>
+          <h3 class="ligh-cream-TXT">Choose the frequency</h3>
+          <p class="ligh-cream-TXT">Customize your order frequency, quantity, even your roast style 
+            and grind type. Pause, skip or cancel your subscription with 
+            no commitment through our online portal.</p>
+        </div>
+        <div class="steps__box">
+          <span class="pale-orange-TXT | ff-fraunces">03</span>
+          <h3 class="ligh-cream-TXT">Receive and enjoy!</h3>
+          <p class="ligh-cream-TXT">We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning 
+            world-class coffees curated to provide a distinct tasting experience.</p>
+        </div>
+      </div>
+   </section>
+
+   <section class="coffee | reveal">
+      <div class="coffee__index">
+        <div id="first-index" data-content="preference" class="index | default">
+          <span class="grey-TXT">01</span>
+          <h4 class="dark-grey-blue-TXT">Preferences</h4>
+        </div>
+        <div class="index | default" data-content="type">
+          <span class="grey-TXT" >02</span>
+          <h4 class="dark-grey-blue-TXT">Bean Type</h4>
+        </div>
+        <div class="index | default" data-content="quantity">
+          <span class="grey-TXT" >03</span>
+          <h4 class="dark-grey-blue-TXT">Quantity</h4>
+        </div>
+        <div class="index | default" data-content="grind">
+          <span class="grey-TXT" >04</span>
+          <h4 class="dark-grey-blue-TXT">Grind Option</h4>
+        </div>
+        <div class="index | default" data-content="delivery">
+          <span class="grey-TXT" >05</span>
+          <h4 class="dark-grey-blue-TXT">Deliveries</h4>
+        </div>
+      </div>
+      <div class="coffee__new">
+        <div class="coffee__accordion | panel-close">
+          <div class="coffee__panel | panel-close">
+            <div class="coffee__title" data-content="preference">
+              <h3 id="panel1-title"><button class="grey-TXT | btn-option" aria-controls="panel1-content" aria-expanded="false">How do you drink your coffee?</button></h3>
+              <svg alt="arrow icon which, if clicked, expands the content below" width="19" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M15.949.586l2.828 2.828-9.096 9.096L.586 3.414 3.414.586l6.267 6.267z" fill="#0E8784" fill-rule="nonzero"/></svg>
+            </div>
+            <div class="coffee__content" id="panel1-content" role="region" aria-labelledby="panel1-title" aria-hidden="true" data-tab="preference">
+              <div class="coffee__cards">
+                <div class="card | capsule" data-active="false">
+                  <h4>Capsule</h4>
+                  <p>Compatible with Nespresso systems and similar brewers</p>
+                </div>
+                <div class="card">
+                  <h4>Filter</h4>
+                  <p>For pour over or drip methods like Aeropress, Chemex, and V60</p>
+                </div>
+                <div class="card">
+                  <h4>Espresso</h4>
+                  <p>Dense and finely ground beans for an intense, flavorful experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="coffee__panel | panel-close">
+            <div class="coffee__title" data-content="type">
+              <h3 id="panel2-title"><button class="grey-TXT | btn-option" aria-controls="panel2-content" aria-expanded="false">
+                What type of coffee?
+              </button></h3>
+              <svg alt="arrow icon which, if clicked, expands the content below" width="19" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M15.949.586l2.828 2.828-9.096 9.096L.586 3.414 3.414.586l6.267 6.267z" fill="#0E8784" fill-rule="nonzero"/></svg>
+            </div>
+            <div class="coffee__content" id="panel2-content" role="region" aria-labelledby="panel2-title" aria-hidden="true" data-tab="type">
+              <div class="coffee__cards">
+                <div class="card">
+                  <h4>Single Origin</h4>
+                  <p>Distinct, high quality coffee from a specific family-owned farm</p>
+                </div>
+                <div class="card">
+                  <h4>Decaf</h4>
+                  <p>Just like regular coffee, except the caffeine has been removed</p>
+                </div>
+                <div class="card">
+                  <h4>Blended</h4>
+                  <p>Combination of two or three dark roasted beans of organic coffees</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="coffee__panel | panel-close">
+            <div class="coffee__title" data-content="quantity">
+              <h3 id="panel3-title"><button class="grey-TXT | btn-option" aria-controls="panel3-content" aria-expanded="false" >
+                How much would you like?
+              </button></h3>
+              <svg alt="arrow icon which, if clicked, expands the content below" width="19" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M15.949.586l2.828 2.828-9.096 9.096L.586 3.414 3.414.586l6.267 6.267z" fill="#0E8784" fill-rule="nonzero"/></svg>
+            </div>
+            <div class="coffee__content" id="panel3-content" role="region" aria-labelledby="panel3-title" aria-hidden="true" data-tab="quantity">
+              <div class="coffee__cards">
+                <div class="card" data-quantity="250"> 
+                  <h4>250g</h4>
+                  <p>Perfect for the solo drinker. Yields about 12 delicious cups.</p>
+                </div>
+                <div class="card" data-quantity="500">
+                  <h4>500g</h4>
+                  <p>Perfect option for a couple. Yields about 40 delectable cups.</p>
+                </div>
+                <div class="card" data-quantity="1000">
+                  <h4>1000g</h4>
+                  <p>Perfect for offices and events. Yields about 90 delightful cups.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="coffee__panel | panel-close">
+            <div class="coffee__title" data-content="grind">
+              <h3 id="panel4-title"><button class="grey-TXT | btn-option" aria-controls="panel4-content" aria-expanded="false">
+                Want us to grind them?
+              </button></h3>
+              <svg alt="arrow icon which, if clicked, expands the content below" width="19" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M15.949.586l2.828 2.828-9.096 9.096L.586 3.414 3.414.586l6.267 6.267z" fill="#0E8784" fill-rule="nonzero"/></svg>
+            </div>
+            <div class="coffee__content" id="panel4-content" role="region" aria-labelledby="panel4-title" aria-hidden="true" data-tab="grind">
+              <div class="coffee__cards">
+                <div class="card">
+                  <h4>Wholebean</h4>
+                  <p>Best choice if you cherish the full sensory experience</p>
+                </div>
+                <div class="card">
+                  <h4>Filter</h4>
+                  <p>For drip or pour-over coffee methods such as V60 or Aeropress</p>
+                </div>
+                <div class="card">
+                  <h4>Cafetiére</h4>
+                  <p> Course ground beans specially suited for french press coffee</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="coffee__panel | panel-close">
+            <div class="coffee__title" data-content="delivery">
+              <h3 id="panel5-title"><button class="grey-TXT | btn-option" aria-controls="panel5-content" aria-expanded="false" >
+                How often should we deliver?
+              </button></h3>
+              <svg alt="arrow icon which, if clicked, expands the content below" width="19" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M15.949.586l2.828 2.828-9.096 9.096L.586 3.414 3.414.586l6.267 6.267z" fill="#0E8784" fill-rule="nonzero"/></svg>
+            </div>
+            <div class="coffee__content" id="panel5-content" role="region" aria-labelledby="panel5-title" aria-hidden="true" data-tab="delivery">
+              <div class="coffee__cards">
+                <div class="card" data-delivery="week">
+                  <h4>Every week</h4>
+                  <p>$7.20 per shipment. Includes free first-class shipping.</p>
+                </div>
+                <div class="card" data-delivery="week2">
+                  <h4>Every 2 weeks</h4>
+                  <p>$9.60 per shipment. Includes free priority shipping.</p>
+                </div>
+                <div class="card" data-delivery="month">
+                  <h4>Every month</h4>
+                  <p>$12.00 per shipment. Includes free priority shipping.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="coffee__recap | wrapper | wrapper-small | reveal">
+          <div class="coffee__recap__text | dark-grey-blue-BG | br-radius">
+            <span class="grey-TXT">ORDER SUMMARY</span>
+            <p class="ligh-cream-TXT | p-serif | resume-text">“I drink my coffee as <span class="resume">_</span>, with a <span class="resume">_</span> type of bean. <span class="resume">_</span> <span class="grind-option">ground ala <span class="resume">_</span></span>, sent to me <span class="resume">_</span>.”</p>
+          </div>
+          <button class="main-cta | cta-recap | cta-disabled">Create my plan!</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer | dark-grey-blue-BG">
+    <img src="./ASSETS/Shared/desktop/logo white.svg" alt="">
+    <nav class="footer__nav">
+      <ul class="navmenu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about_us.html">ABOUT US</a></li>
+        <li><a href="create_your_plan.html">CREATE YOUR PLAN</a></li>
+      </ul>
+    </nav>
+    <div class="footer__box-social">
+      <ul>
+        <li><a href="#"><svg alt="facebook-icon" class="social-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="#FEFCF7" d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg></a></li>
+        <li><a href="#"><svg alt="twitter-icon" class="social-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="20"><path fill="#FEFCF7" d="M24 2.557a9.83 9.83 0 01-2.828.775A4.932 4.932 0 0023.337.608a9.864 9.864 0 01-3.127 1.195A4.916 4.916 0 0016.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 1.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 17.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 2.557z"/></svg></a></li>
+        <li><a href="#"><svg alt="instagram-icon" class="social-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="#FEFCF7" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <dialog class="dialog | br-radius | reveal" aria-hidden="true">
+    <div class="dialog__summary | ligh-cream-BG">
+      <div class="dark-grey-blue-BG">
+        <h3 class="ligh-cream-TXT">Order Summary</h3>
+      </div>
+      <div>
+        <p class="grey-TXT | p-serif | resume-text">“I drink my coffee as <span class="method-coffee | resume">_</span>, with a <span class="type-coffee | resume">_</span> type of bean. <span class="quantity-coffee | resume">_</span> <span class="grind-option">ground ala <span class="grind-coffee | resume">_</span></span>, sent to me <span class="time-coffee | resume">_</span>.”</p>
+        <p class="dark-grey-blue-TXT | opacity-txt">Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout. </p>
+        <div class="dialog__btn">
+          <span id="order-cost" class="ff-fraunces | dark-grey-blue-TXT">$<span class="total">00.00</span>/mo</span>
+          <button class="main-cta | cta-dialog">Checkout <span id="price-order-btn">- $<span class="total"></span>/mo</span></button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

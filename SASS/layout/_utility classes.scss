@@ -224,3 +224,12 @@
   font-size: $fs-24;
   font-family: $ff-Fraunces;
 }
+
+@media (width < 40em){
+  .timeline{
+    display: none;
+  }
+}
+.timeline{
+  margin-block-end: 3rem;
+}

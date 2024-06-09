@@ -27,15 +27,11 @@
         align-items: stretch;
         margin: 0;
       }
-
-      #timeline{
-        margin-block-end: 3rem;
-      }
     }
 
     @media (width > 60em){
       padding: 6.25rem 5.3125rem 6.25rem;
-        #timeline{
+        .timeline{
           width: 47.5rem;
           margin-block-end: 5rem;
         }
@@ -112,7 +108,7 @@
 
   @media (width > 40em){
 
-    #timeline{
+    .timeline{
       margin-block-end: 3rem;
     }
 

@@ -366,6 +366,15 @@ textarea:not([rows]) {
   font-family: "Fraunces", sans-serif;
 }
 
+@media (width < 40em) {
+  .timeline {
+    display: none;
+  }
+}
+.timeline {
+  margin-block-end: 3rem;
+}
+
 .hero-about {
   background: url("../ASSETS/About/mobile/image-hero-whitecup.jpg") no-repeat center right/cover;
   padding-block: 6.875rem 5.4375rem;
