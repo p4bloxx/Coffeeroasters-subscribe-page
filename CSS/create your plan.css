@@ -252,14 +252,14 @@ textarea:not([rows]) {
     transition-property: transform;
   }
   .main-cta:hover {
-    animation: scale 0.5s ease;
+    animation: scale 0.7s ease;
     background-color: #66D2CF;
   }
 }
 
 @keyframes scale {
   0% {
-    transform: scale(0.6);
+    transform: scale(0.9);
   }
   100% {
     transform: scale(1);
@@ -330,9 +330,23 @@ textarea:not([rows]) {
   top: 1rem;
   left: 4rem;
   transform: translateY(-150%);
+  z-index: 100;
 }
 .skip-btn:focus {
   transform: translateY(0);
+}
+
+/*screen-readers only*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
 }
 
 .big-h2 {
@@ -565,7 +579,7 @@ textarea:not([rows]) {
   }
   .coffee__cards > div:hover {
     background-color: #FDD6BA;
-    animation: scale 0.5s ease;
+    animation: scale 0.7s ease;
   }
   .coffee .cta-recap {
     margin-inline: auto 0;
