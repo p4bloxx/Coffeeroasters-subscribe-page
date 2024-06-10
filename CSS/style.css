@@ -71,7 +71,6 @@ button {
 body {
   min-height: 100vh;
   line-height: 1.5;
-  /* overflow-y: hidden; */
   position: relative;
   font-weight: 400;
   font-family: "Barlow", sans-serif;
@@ -99,6 +98,7 @@ a:not([class]) {
 a {
   text-decoration: none;
   color: inherit;
+  display: inline-block;
 }
 
 dialog {
